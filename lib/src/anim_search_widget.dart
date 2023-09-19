@@ -251,7 +251,8 @@ class _AnimSearchBarState extends State<AnimSearchBar>
                 opacity: (toggle == 0) ? 0.0 : 1.0,
                 duration: Duration(milliseconds: 200),
                 child: Container(
-                  padding: const EdgeInsets.only(left: 10),
+                  padding: const EdgeInsets.only(left: 10, top: 0),
+                  margin: const EdgeInsets.only(bottom: 25, top: 0),
                   alignment: Alignment.topCenter,
                   width: widget.width / 1.7,
                   child: TextField(
@@ -279,8 +280,10 @@ class _AnimSearchBarState extends State<AnimSearchBar>
                         ? widget.style
                         : TextStyle(color: Colors.black),
                     cursorColor: Colors.black,
+                    textAlign: TextAlign.left,
+                    textAlignVertical: TextAlignVertical.center,
                     decoration: InputDecoration(
-                      contentPadding: const EdgeInsets.only(bottom: 5),
+                      contentPadding: const EdgeInsets.only(bottom: 0),
                       isDense: true,
                       floatingLabelBehavior: FloatingLabelBehavior.never,
                       labelText: widget.helpText,
